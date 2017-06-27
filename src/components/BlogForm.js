@@ -10,10 +10,14 @@ const BlogForm = ({ dispatch }) => {
       <form
         onSubmit={ e => {
           e.preventDefault();
-          dispatch({ type: 'ADD_BLOG', blog: input.value})
+          dispatch({ type: 'ADD_BLOG', blog: input.value })
+          input.value=null;
         }}
+      >
+       <input ref={ n => input = n } />
+       </form>
     </div>
   )
 }
 
-export default From;
+export default connect()(BlogForm);

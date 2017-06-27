@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import './App.css';
-import BlogList from './BlogList';
-import BlogForm from './BlogForm';
+import BlogList from './components/BlogList';
+import BlogForm from './components/BlogForm';
 
 class App extends Component {
   render()   {
     return (
       <div className='App'>
-        <List />
-        <Form />
+        <BlogList />
+        <BlogForm />
       </div>
     );
   }
